@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "tableViewSelected/OneTableViewController.m"
-            timestampString = "560916560.578563"
+            filePath = "tableViewSelected/ThreeTableViewController.m"
+            timestampString = "560916560.578643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "tableViewSelected/ThreeTableViewController.m"
-            timestampString = "560916560.578643"
+            filePath = "controller/Persent.m"
+            timestampString = "566891800.742259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "-sinceRequst:indexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

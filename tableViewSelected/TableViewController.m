@@ -13,6 +13,9 @@
 #import "ThreeTableViewController.h"
 #import "FourTableViewController.h"
 #import "FiveTableViewController.h"
+#import "Tool.h"
+#import "toolframework.h"
+#import "xunhuanViewController.h"
 
 @interface TableViewController ()
 
@@ -25,8 +28,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.startArry=[NSArray arrayWithObjects:@"一组cell 里面 如果有超过2个cell。就展示更多按钮",@"cell 文本的展开 关闭",@"多个cell，展开一个",@"书签章节学习",@"qq组的展开关闭", nil];
+    self.startArry=[NSArray arrayWithObjects:@"一组cell 里面 如果有超过2个cell。就展示更多按钮",@"cell 文本的展开 关闭",@"多个cell，展开一个",@"书签章节学习",@"qq组的展开关闭",@"循环引用" ,nil];
     
+    CGFloat onefloat = 0.00225112244;
+    
+    NSLog(@"onefloat_____%f",onefloat);
+    [self notRounding:onefloat afterPoint:4];
+    
+     NSLog(@"onefloat_____%@",  [self notRounding:onefloat afterPoint:4]);
+    
+    NSLog(@"twofloat_____%f",  [self notRounding:onefloat afterPoint:4].floatValue);
+    
+    [Tool lodLog];
+     [toolframework framelodLog];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,6 +119,18 @@
             
             [self.navigationController pushViewController:oneVC animated:YES];
         }
+        case 5:
+        {
+            xunhuanViewController *xunhuanVC=[xunhuanViewController new];
+            
+            [self.navigationController pushViewController:xunhuanVC animated:YES];
+        }
+        case 6:
+        {
+            xunhuanViewController *xunhuanVC=[xunhuanViewController new];
+            
+            [self.navigationController pushViewController:xunhuanVC animated:YES];
+        }
             break;
         default:
             break;
@@ -111,5 +138,24 @@
     
     
 }
+
+-(NSString* )notRounding:(float)price afterPoint:(int)position{
+    
+    NSDecimalNumberHandler* roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    
+    NSDecimalNumber *ouncesDecimal;
+    
+    NSDecimalNumber *roundedOunces;
+    
+    
+    ouncesDecimal = [[NSDecimalNumber alloc] initWithFloat:price];
+    
+    roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
+    
+    
+     return [NSString stringWithFormat:@"%@",roundedOunces];
+    
+}
+
 
 @end
